@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>متجر هواتف — Luxury Tech</title>
+
+  <!-- Arabic Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="theme-dark">
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo" aria-label="شعار المتجر">★</div>
+        <div class="brand__text">
+          <div class="brand__name">متجر الهواتف الفاخرة</div>
+          <div class="brand__tag">Luxury • Tech • Trusted</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#home" class="nav__link">الرئيسية</a>
+        <a href="#products" class="nav__link">المنتجات</a>
+        <a href="#about" class="nav__link">من نحن</a>
+        <button id="openCartBtn" class="nav__cart" type="button">
+          <span class="nav__cartIcon">🛒</span>
+          <span>سلة المشتريات</span>
+          <span id="cartCountBadge" class="badge">0</span>
+        </button>
+      </nav>
+
+      <div class="actions">
+        <button id="themeToggleBtn" class="btn btn--ghost" type="button" aria-label="تبديل المظهر">
+          <span id="themeIcon">🌙</span>
+          <span id="themeLabel">مظهر ليلي</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">هواتف أصلية • ضمان • تجربة شراء راقية</h1>
+        <p class="hero__desc">
+          نعرض أفضل الهواتف من الشركات المعتمدة مع تجربة تسوّق فاخرة وسهلة، وسلة مشتريات مرتبطة مباشرة بواتساب للتواصل السريع.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#products">تصفّح المنتجات</a>
+          <a class="btn btn--ghost" href="#about">تعرف علينا</a>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="hero__cardTop">
+          <div class="chip">Luxury Tech Style</div>
+          <div class="spark"></div>
+        </div>
+        <div class="hero__cardBody">
+          <div class="stat">
+            <div class="stat__label">خدمة سريعة</div>
+            <div class="stat__value">واتساب</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">شركات معتمدة</div>
+            <div class="stat__value">4</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">جودة عرض</div>
+            <div class="stat__value">Premium</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">من نحن</h2>
+        <p class="section__subtitle">
+          خبرة في بيع الهواتف الذكية مع التزام كامل بالأصالة، وضوح الأسعار، وخدمة عملاء محترفة.
+        </p>
+      </div>
+
+      <div class="aboutGrid">
+        <div class="aboutCard">
+          <h3>ثقة واحترافية</h3>
+          <p>نعتمد معايير واضحة للمنتجات: أصالة، جودة، وضمان — مع دعم سريع عبر واتساب.</p>
+        </div>
+        <div class="aboutCard">
+          <h3>منتجات مضمونة</h3>
+          <p>نحرص على عرض منتجات موثوقة فقط من العلامات المحددة داخل المتجر.</p>
+        </div>
+        <div class="aboutCard">
+          <h3>تجربة شراء فاخرة</h3>
+          <p>تصميم أنيق، سلة منظمة، ورسالة طلب تلقائية بالمنتجات والأسعار والإجمالي.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands -->
+  <section class="section section--muted">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">الشركات</h2>
+        <p class="section__subtitle">اختر الشركة لعرض منتجاتها فقط.</p>
+      </div>
+
+      <div class="brands" role="tablist" aria-label="اختيار الشركة">
+        <button class="brandBtn is-active" data-brand="all" type="button" role="tab" aria-selected="true">
+          <span class="brandBtn__icon">★</span>
+          <span class="brandBtn__text">الكل</span>
+        </button>
+
+        <button class="brandBtn" data-brand="apple" type="button" role="tab" aria-selected="false">
+          <span class="brandBtn__icon" aria-hidden="true">
+            <!-- Apple (simple mark) -->
+            <svg viewBox="0 0 24 24" class="logoSvg" aria-label="Apple">
+              <path d="M16.7 13.3c0 3.6 3.1 4.8 3.1 4.8s-2.4 6.9-5.6 6.9c-1.5 0-2.1-1-3.9-1s-2.5 1-4 1C3.2 25 1 18.9 1 14.9 1 8.6 4.9 5.8 8.1 5.8c1.5 0 2.6 1 3.8 1 1.1 0 2.9-1.2 5-1.1.8 0 3 .1 4.4 2.2-3.8 2.1-3.6 5.4-3.6 5.4zM14.3 3.8c.9-1.1 1.6-2.7 1.4-4.3-1.4.1-3.1 1-4 2.1-.9 1-1.6 2.6-1.4 4.1 1.6.1 3.1-.8 4-1.9z"/>
+            </svg>
+          </span>
+          <span class="brandBtn__text">Apple</span>
+        </button>
+
+        <button class="brandBtn" data-brand="samsung" type="button" role="tab" aria-selected="false">
+          <span class="brandBtn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="logoSvg" aria-label="Samsung">
+              <path d="M3 7c0-2 1.6-3 3.6-3H21v4H7.2c-.7 0-1.2.2-1.2.8 0 .6.5.8 1.2.8h8.5c3 0 5.3 1.4 5.3 4.6 0 2.8-2 5-6 5H3v-4h12.7c.8 0 1.4-.2 1.4-1 0-.7-.6-1-1.4-1H7.3C4.8 13 3 11.7 3 9.2V7z"/>
+            </svg>
+          </span>
+          <span class="brandBtn__text">Samsung</span>
+        </button>
+
+        <button class="brandBtn" data-brand="google" type="button" role="tab" aria-selected="false">
+          <span class="brandBtn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="logoSvg" aria-label="Google">
+              <path d="M12 10.2v3.6h5.1c-.6 2-2.3 3.6-5.1 3.6-3.1 0-5.7-2.6-5.7-5.7S8.9 6 12 6c1.7 0 3.1.7 4.1 1.6l2.5-2.5C16.9 3.5 14.7 2.4 12 2.4 6.9 2.4 2.7 6.6 2.7 11.7S6.9 21 12 21c5.4 0 9-3.8 9-9.1 0-.6-.1-1.1-.2-1.7H12z"/>
+            </svg>
+          </span>
+          <span class="brandBtn__text">Google</span>
+        </button>
+
+        <button class="brandBtn" data-brand="motorola" type="button" role="tab" aria-selected="false">
+          <span class="brandBtn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="logoSvg" aria-label="Motorola">
+              <path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12S6.6 21.8 12 21.8 21.8 17.4 21.8 12 17.4 2.2 12 2.2zm0 2.1c4.3 0 7.8 3.5 7.8 7.7 0 1.8-.6 3.4-1.6 4.7-1.1-2.8-3.2-6.8-6.2-6.8-1.3 0-2.2.8-3 1.8-.8-1-1.7-1.8-3-1.8-3 0-5.1 4-6.2 6.8-1-1.3-1.6-2.9-1.6-4.7 0-4.2 3.5-7.7 7.8-7.7z"/>
+            </svg>
+          </span>
+          <span class="brandBtn__text">Motorola</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="productsHead">
+        <div>
+          <h2 class="section__title">المنتجات <span id="productsCount" class="countPill">0</span></h2>
+          <p class="section__subtitle" id="activeBrandLabel">عرض: الكل</p>
+        </div>
+
+        <div class="searchWrap">
+          <input id="searchInput" class="searchInput" type="search" placeholder="ابحث باسم الهاتف..." autocomplete="off">
+          <span class="searchIcon">🔎</span>
+        </div>
+      </div>
+
+      <div id="statusBar" class="statusBar">
+        <span class="dot"></span>
+        <span id="statusText">جاري تحميل المنتجات...</span>
+      </div>
+
+      <div id="productsGrid" class="grid"></div>
+
+      <div class="moreWrap">
+        <button id="loadMoreBtn" class="btn btn--ghost" type="button" hidden>عرض المزيد</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer__overlay" id="closeCartOverlay"></div>
+
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="سلة المشتريات">
+      <div class="drawer__head">
+        <div>
+          <h3>سلة المشتريات</h3>
+          <p class="muted">اختر منتجاتك ثم أرسل الطلب عبر واتساب.</p>
+        </div>
+        <button id="closeCartBtn" class="iconBtn" type="button" aria-label="إغلاق">✕</button>
+      </div>
+
+      <div id="cartItems" class="cartItems"></div>
+
+      <div class="drawer__footer">
+        <div class="totalRow">
+          <span>الإجمالي</span>
+          <strong id="cartTotal">0</strong>
+        </div>
+        <button id="checkoutBtn" class="btn btn--primary btn--full" type="button">
+          إتمام الطلب عبر واتساب
+        </button>
+        <p class="tiny muted">سيتم فتح واتساب تلقائيًا مع رسالة تحتوي على تفاصيل الطلب.</p>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> متجر الهواتف الفاخرة</span>
+      <span class="muted">تصميم Luxury Tech</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
